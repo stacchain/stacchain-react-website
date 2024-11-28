@@ -2,18 +2,18 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <nav className="flex flex-col space-y-2">
+    <nav className="flex flex-col space-y-2 pr-4">
       <a
         href="#home"
         className="flex items-center text-clampIcon text-white hover:text-gray-300"
       >
-        <i className="fas fa-home mr-2"></i> Home
+        <i className="fas fa-home mr-3"></i> Home
       </a>
       <a
         href="#about"
         className="flex items-center text-clampIcon text-white hover:text-gray-300"
       >
-        <i className="fas fa-info-circle mr-2"></i> About
+        <i className="fas fa-info-circle mr-3"></i> About
       </a>
       <a
         href="https://github.com/stacchain"
@@ -21,7 +21,7 @@ const Nav = () => {
         rel="noopener noreferrer"
         className="flex items-center text-clampIcon text-white hover:text-gray-300"
       >
-        <i className="fab fa-github mr-2"></i> GitHub
+        <i className="fab fa-github mr-3"></i> GitHub
       </a>
       <a
         href="https://www.linkedin.com/company/stacchain"
@@ -29,13 +29,13 @@ const Nav = () => {
         rel="noopener noreferrer"
         className="flex items-center text-clampIcon text-white hover:text-gray-300"
       >
-        <i className="fab fa-linkedin mr-2"></i> Linkedin
+        <i className="fab fa-linkedin mr-3"></i> Linkedin
       </a>
       <a
         href="#contact"
         className="flex items-center text-clampIcon text-white hover:text-gray-300"
       >
-        <i className="fas fa-envelope mr-2"></i> Contact
+        <i className="fas fa-envelope mr-3"></i> Contact
       </a>
     </nav>
   );
