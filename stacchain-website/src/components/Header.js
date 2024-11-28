@@ -14,7 +14,7 @@ const Header = () => {
               <span className="text-white">chain</span>
             </div>
             <p
-              className="text-black text-lg mt-2"
+              className="text-black text-lg mt-1"
               style={{ fontSize: "clamp(0.8rem, 1.1vw, 1.7rem)" }}
             >
               Data integrity, provenance, discovery and economics for the
