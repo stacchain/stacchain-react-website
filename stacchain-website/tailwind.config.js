@@ -7,7 +7,7 @@ module.exports = {
         comfortaa: ["Comfortaa", "cursive"],
       },
       fontSize: {
-        clamp: "clamp(3rem, 8vw, 9rem)", // Define your clamp sizes
+        clamp: "clamp(4rem, 9vw, 10rem)", // Define your clamp sizes
       },
     },
   },

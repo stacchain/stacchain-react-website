@@ -24,6 +24,14 @@ const Nav = () => {
         <i className="fab fa-github mr-2"></i> GitHub
       </a>
       <a
+        href="https://www.linkedin.com/company/stacchain"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center text-white hover:text-gray-300"
+      >
+        <i className="fab fa-linkedin mr-2"></i> Linkedin
+      </a>
+      <a
         href="#contact"
         className="flex items-center text-white hover:text-gray-300"
       >
