@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         comfortaa: ["Comfortaa", "cursive"],
       },
+      fontSize: {
+        clamp: "clamp(3rem, 8vw, 9rem)", // Define your clamp sizes
+      },
     },
   },
   plugins: [],
