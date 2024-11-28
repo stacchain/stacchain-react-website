@@ -9,6 +9,7 @@ module.exports = {
       fontSize: {
         clamp: "clamp(4rem, 10vw, 11rem)", // Define your clamp sizes
         clampIcon: "clamp(1rem, 2vw, 2rem)",
+        clampLogo: "clamp(2rem, 3vw, 12rem)",
       },
     },
   },
