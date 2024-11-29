@@ -1,52 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   return (
-    <nav className="bg-gradient-to-b from-green-400 to-green-300 text-black">
+    <nav className="bg-gradient-to-b from-green-400 to-green-300 text-gray-800 shadow-md">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-4xl font-bold">
-              <span className="font-comfortaa">stac</span>
-              <span className="text-white font-comfortaa">chain</span>
+            <a href="/" className="text-4xl font-bold font-comfortaa">
+              <span>stac</span>
+              <span className="text-white">chain</span>
             </a>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-4">
-            <a
-              href="#home"
-              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
-            >
-              About
-            </a>
-            <a
-              href="#services"
-              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
-            >
-              Services
-            </a>
-            <a
-              href="#contact"
-              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
-            >
-              Contact
-            </a>
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="px-3 py-2 rounded-md text-sm font-medium text-gray-800 hover:bg-green-500 hover:text-white transition-colors duration-300"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
+              onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-expanded="false"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-white hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors duration-300"
+              aria-expanded={isOpen}
             >
               <span className="sr-only">Open main menu</span>
               {/* Icon for mobile */}
@@ -58,17 +53,43 @@ const Navbar = () => {
                 stroke="currentColor"
                 aria-hidden="true"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
               </svg>
             </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-green-500 hover:text-white transition-colors duration-300"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

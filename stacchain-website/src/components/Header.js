@@ -8,7 +8,7 @@ const Header = () => {
     <header>
       <Navbar />
       {/* Gradient Background for the Logo and Navigation */}
-      <div className="bg-gradient-to-b from-blue-400 to-blue-100 w-full py-14">
+      <div className="bg-gradient-to-b from-gray-400 to-gray-300 w-full py-14">
         <div className="max-w-screen-xl mx-auto px-4 flex flex-col sm:flex-row items-center sm:justify-between">
           {/* Logo and Tagline */}
           <div className="flex flex-col items-center sm:items-start">

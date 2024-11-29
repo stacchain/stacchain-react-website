@@ -26,7 +26,7 @@ const Nav = ({ className }) => {
             href={href}
             target={external ? "_blank" : undefined}
             rel={external ? "noopener noreferrer" : undefined}
-            className="flex flex-col items-center text-white hover:text-green-400 transition-colors duration-300"
+            className="flex flex-col items-center text-gray-800 hover:text-green-400 transition-colors duration-300"
           >
             <i className={`${icon} text-2xl`}></i>
             <span className="mt-1 text-sm hidden md:block">{label}</span>
