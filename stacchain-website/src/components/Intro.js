@@ -9,7 +9,7 @@ const ProjectIntroduction = ({ className }) => {
           {/* Main Content Column */}
           <div className="lg:w-2/3">
             {/* Mission Statement */}
-            <h2 className="group text-3xl font-bold mb-6 bg-green-400 text-white px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-green-500 transition-colors duration-300">
+            <h2 className="group text-3xl font-bold mb-6 bg-gray-200 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-300 transition-colors duration-300 shadow-lg">
               Our Mission
             </h2>
             <p className="text-lg leading-relaxed mb-8">
@@ -25,7 +25,7 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Overview */}
-            <h2 className="group text-3xl font-bold mb-6 bg-green-400 text-white px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-green-500 transition-colors duration-300">
+            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-200 transition-colors duration-300 shadow-lg">
               Overview
             </h2>
             <p className="text-lg leading-relaxed mb-8">
@@ -42,7 +42,7 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Empowering Innovation and Collaboration */}
-            <h2 className="group text-3xl font-bold mb-6 bg-green-400 text-white px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-green-500 transition-colors duration-300">
+            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-200 transition-colors duration-300 shadow-lg">
               Empowering Innovation and Collaboration
             </h2>
             <p className="text-lg leading-relaxed mb-8">
@@ -62,7 +62,7 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Economic Incentives and Sustainable Growth */}
-            <h2 className="group text-3xl font-bold mb-6 bg-green-400 text-white px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-green-500 transition-colors duration-300">
+            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-200 transition-colors duration-300 shadow-lg">
               Economic Incentives and Sustainable Growth
             </h2>
             <p className="text-lg leading-relaxed mb-8">
@@ -79,7 +79,7 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* A Vision for the Future */}
-            <h2 className="group text-3xl font-bold mb-6 bg-green-400 text-white px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-green-500 transition-colors duration-300">
+            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-200 transition-colors duration-300 shadow-lg">
               A Vision for the Future
             </h2>
             <p className="text-lg leading-relaxed mb-8">
@@ -94,7 +94,7 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Dedication to Open Source */}
-            <h2 className="group text-3xl font-bold mb-6 bg-green-400 text-white px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-green-500 transition-colors duration-300">
+            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-200 transition-colors duration-300 shadow-lg">
               Dedication to Open Source
             </h2>
             <p className="text-lg leading-relaxed">
