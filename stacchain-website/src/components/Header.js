@@ -1,10 +1,12 @@
 import React from "react";
 import Nav from "./Nav";
 import logo from "../assets/stacchain-logo.svg";
+import Navbar from "./NavBar";
 
 const Header = () => {
   return (
     <header>
+      <Navbar />
       {/* Gradient Background for the Logo and Navigation */}
       <div className="bg-gradient-to-b from-blue-400 to-blue-100 w-full py-14">
         <div className="max-w-screen-xl mx-auto px-4 flex flex-col sm:flex-row items-center sm:justify-between">
