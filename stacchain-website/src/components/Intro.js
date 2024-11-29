@@ -5,7 +5,7 @@ const ProjectIntroduction = ({ className }) => {
     <section className={`px-4 py-10 ${className}`}>
       <div className="max-w-screen-xl mx-auto">
         {/* Mission Statement */}
-        <h2 className="text-3xl font-bold mb-6 bg-green-500 text-white px-4 py-2 rounded-md">
+        <h2 className="text-3xl font-bold mb-6 bg-green-400 text-white px-4 py-2 rounded-md">
           Our Mission
         </h2>
         <p className="text-lg leading-relaxed mb-8">
@@ -20,7 +20,7 @@ const ProjectIntroduction = ({ className }) => {
         </p>
 
         {/* Overview */}
-        <h2 className="text-3xl font-bold mb-6 bg-gray-800 text-white px-4 py-2 rounded-md">
+        <h2 className="text-3xl font-bold mb-6 bg-gray-700 text-white px-4 py-2 rounded-md">
           Overview
         </h2>
         <p className="text-lg leading-relaxed mb-8">
@@ -36,7 +36,7 @@ const ProjectIntroduction = ({ className }) => {
         </p>
 
         {/* Empowering Innovation and Collaboration */}
-        <h2 className="text-3xl font-bold mb-6 bg-green-500 text-white px-4 py-2 rounded-md">
+        <h2 className="text-3xl font-bold mb-6 bg-green-400 text-white px-4 py-2 rounded-md">
           Empowering Innovation and Collaboration
         </h2>
         <p className="text-lg leading-relaxed mb-8">
@@ -55,7 +55,7 @@ const ProjectIntroduction = ({ className }) => {
         </p>
 
         {/* Economic Incentives and Sustainable Growth */}
-        <h2 className="text-3xl font-bold mb-6 bg-gray-800 text-white px-4 py-2 rounded-md">
+        <h2 className="text-3xl font-bold mb-6 bg-gray-700 text-white px-4 py-2 rounded-md">
           Economic Incentives and Sustainable Growth
         </h2>
         <p className="text-lg leading-relaxed mb-8">
@@ -72,7 +72,7 @@ const ProjectIntroduction = ({ className }) => {
         </p>
 
         {/* A Vision for the Future */}
-        <h2 className="text-3xl font-bold mb-6 bg-green-500 text-white px-4 py-2 rounded-md">
+        <h2 className="text-3xl font-bold mb-6 bg-green-400 text-white px-4 py-2 rounded-md">
           A Vision for the Future
         </h2>
         <p className="text-lg leading-relaxed mb-8">
@@ -87,7 +87,7 @@ const ProjectIntroduction = ({ className }) => {
         </p>
 
         {/* Dedication to Open Source */}
-        <h2 className="text-3xl font-bold mb-6 bg-gray-800 text-white px-4 py-2 rounded-md">
+        <h2 className="text-3xl font-bold mb-6 bg-gray-700 text-white px-4 py-2 rounded-md">
           Dedication to Open Source
         </h2>
         <p className="text-lg leading-relaxed">
