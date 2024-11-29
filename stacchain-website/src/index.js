@@ -4,6 +4,12 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import {
+  FaHome,
+  FaInfoCircle,
+  FaConciergeBell,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
