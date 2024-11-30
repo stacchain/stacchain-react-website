@@ -1,23 +1,38 @@
 import React from "react";
+import {
+  FaLock,
+  FaCoins,
+  FaShieldAlt,
+  FaCode,
+  FaBullseye,
+  FaGlobe,
+  FaHandsHelping,
+} from "react-icons/fa";
+import smartContractsDiagram from "../assets/merkle-trees-and-proofs.png"; // Ensure the path is correct
 
 const SmartContractsSection = ({ className }) => {
   return (
-    <section id="smart-contracts" className={`px-4 py-10 ${className}`}>
+    <section
+      id="smart-contracts"
+      className={`bg-gray-200 px-4 py-10 ${className}`}
+    >
       <div className="max-w-screen-xl mx-auto">
         {/* Container for the content */}
         <div className="flex flex-col lg:flex-row lg:space-x-8">
           {/* Main Content Column */}
           <div className="lg:w-2/3">
             {/* Section Header */}
-            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-300 transition-colors duration-300 shadow-lg">
-              Smart Contracts in stacchain
+            <h2 className="flex items-center text-4xl font-extrabold mb-8 text-black">
+              <FaBullseye className="mr-3 text-green-400" />
+              Smart Contracts
             </h2>
             <p className="text-lg leading-relaxed mb-8">
               Enabling Secure Access and Economic Incentives
             </p>
 
             {/* Smart Contracts Overview */}
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <FaCode className="mr-2 text-green-400" />
               Smart Contracts Overview
             </h3>
             <p className="text-lg leading-relaxed mb-6">
@@ -29,7 +44,8 @@ const SmartContractsSection = ({ className }) => {
             </p>
 
             {/* Understanding Smart Contracts */}
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <FaLock className="mr-2 text-green-400" />
               Understanding Smart Contracts
             </h3>
             <p className="text-lg leading-relaxed mb-6">
@@ -45,7 +61,10 @@ const SmartContractsSection = ({ className }) => {
             </p>
 
             {/* Economic Incentives */}
-            <h3 className="text-2xl font-bold mb-4">Economic Incentives</h3>
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <FaCoins className="mr-2 text-green-400" />
+              Economic Incentives
+            </h3>
             <p className="text-lg leading-relaxed mb-4">
               By integrating smart contracts,{" "}
               <span className="font-bold">stacchain</span> creates a token-based
@@ -73,7 +92,10 @@ const SmartContractsSection = ({ className }) => {
             </p>
 
             {/* Secure Access Control */}
-            <h3 className="text-2xl font-bold mb-4">Secure Access Control</h3>
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <FaShieldAlt className="mr-2 text-green-400" />
+              Secure Access Control
+            </h3>
             <p className="text-lg leading-relaxed mb-4">
               Smart contracts also manage access control, ensuring that only
               authorized users can access certain data. Features include:
@@ -99,7 +121,8 @@ const SmartContractsSection = ({ className }) => {
             </p>
 
             {/* Technical Implementation */}
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <FaCode className="mr-2 text-green-400" />
               Technical Implementation
             </h3>
             <p className="text-lg leading-relaxed mb-4">
@@ -130,14 +153,15 @@ const SmartContractsSection = ({ className }) => {
           {/* Sidebar Column */}
           <div className="lg:w-1/3 mt-10 lg:mt-0">
             {/* Diagram or Additional Information */}
-            <div className="bg-gray-100 p-4 rounded-md shadow-md">
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="bg-white p-4 rounded-md shadow-md">
+              <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+                <FaGlobe className="mr-2 text-green-400" />
                 Smart Contracts Diagram
               </h3>
               <img
-                src="path/to/smart-contracts-diagram.png"
+                src={smartContractsDiagram}
                 alt="Smart Contracts Diagram"
-                className="w-full h-auto mb-4"
+                className="w-full h-auto mb-4 rounded-md"
               />
               <p className="text-lg leading-relaxed">
                 This diagram illustrates how smart contracts automate
@@ -149,15 +173,18 @@ const SmartContractsSection = ({ className }) => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gray-100 p-6 rounded-md shadow-md mt-10">
-          <h3 className="text-2xl font-bold mb-4">Get Involved</h3>
+        <div className="bg-white p-6 rounded-md shadow-md mt-10">
+          <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <FaHandsHelping className="mr-2 text-green-400" />
+            Get Involved
+          </h3>
           <p className="text-lg leading-relaxed mb-4">
             We invite developers and blockchain enthusiasts to contribute to our
-            smart contract development. Your participation can help us enhance
-            the functionality and security of our platform.
+            platform. Your participation can help us enhance the functionality
+            and security of our ecosystem.
           </p>
           <a
-            href="#join-our-community"
+            href="https://github.com/stacchain"
             className="inline-block px-6 py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition-colors duration-300"
           >
             Join Our Community

@@ -5,12 +5,18 @@ const Nav = ({ className }) => {
     <nav className={`relative z-10 ${className}`}>
       <div className="flex flex-row md:flex-col items-center space-x-6 md:space-x-0 md:space-y-4">
         {[
-          { href: "#home", icon: "fas fa-home", label: "Home" },
-          { href: "#about", icon: "fas fa-info-circle", label: "About" },
+          // { href: "#home", icon: "fas fa-home", label: "Home" },
+          // { href: "#about", icon: "fas fa-info-circle", label: "About" },
           {
             href: "https://github.com/stacchain",
             icon: "fab fa-github",
             label: "GitHub",
+            external: true,
+          },
+          {
+            href: "https://github.com/stacchain",
+            icon: "fab fa-slack",
+            label: "Slack",
             external: true,
           },
           {

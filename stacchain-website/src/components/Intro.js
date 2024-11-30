@@ -1,18 +1,36 @@
 import React from "react";
-import merkletree from "../assets/merkle-trees-and-proofs.png";
+import {
+  FaBullseye,
+  FaGlobe,
+  FaHandsHelping,
+  FaCoins,
+  FaLightbulb,
+  FaCode,
+} from "react-icons/fa";
+import merkletree from "../assets/merkle-trees-and-proofs.png"; // Ensure the path is correct
 
 const ProjectIntroduction = ({ className }) => {
   return (
-    <section className={`px-4 py-10 ${className}`}>
+    <section
+      id="project-introduction"
+      className={`bg-white px-4 py-10 ${className}`}
+    >
       <div className="max-w-screen-xl mx-auto">
+        {/* Main Header */}
+        <h2 className="flex items-center text-4xl font-extrabold mb-8 text-black">
+          <FaBullseye className="mr-3 text-green-400" />
+          Introduction
+        </h2>
+
         {/* Container for the content */}
         <div className="flex flex-col lg:flex-row lg:space-x-8">
           {/* Main Content Column */}
           <div className="lg:w-2/3">
-            {/* Mission Statement */}
-            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-300 transition-colors duration-300 shadow-lg">
+            {/* Our Mission */}
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-200 transition-colors duration-300 shadow">
+              <FaLightbulb className="mr-2 text-green-400" />
               Our Mission
-            </h2>
+            </h3>
             <p className="text-lg leading-relaxed mb-8">
               Our mission at <span className="font-bold">stacchain</span> is to
               help revolutionize geospatial data management by ensuring data
@@ -26,9 +44,10 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Overview */}
-            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-200 transition-colors duration-300 shadow-lg">
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-200 transition-colors duration-300 shadow">
+              <FaGlobe className="mr-2 text-green-400" />
               Overview
-            </h2>
+            </h3>
             <p className="text-lg leading-relaxed mb-8">
               <span className="font-bold">stacchain</span> is a pioneering
               platform that aims to assist with bringing together the geospatial
@@ -43,9 +62,10 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Empowering Innovation and Collaboration */}
-            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-200 transition-colors duration-300 shadow-lg">
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <FaHandsHelping className="mr-2 text-green-400" />
               Empowering Innovation and Collaboration
-            </h2>
+            </h3>
             <p className="text-lg leading-relaxed mb-8">
               At the heart of <span className="font-bold">stacchain</span> is
               the belief that accessible and reliable geospatial data can drive
@@ -63,9 +83,10 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Economic Incentives and Sustainable Growth */}
-            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-200 transition-colors duration-300 shadow-lg">
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <FaCoins className="mr-2 text-green-400" />
               Economic Incentives and Sustainable Growth
-            </h2>
+            </h3>
             <p className="text-lg leading-relaxed mb-8">
               <span className="font-bold">stacchain</span> integrates economic
               incentives into its ecosystem to promote secure data sharing and
@@ -80,9 +101,10 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* A Vision for the Future */}
-            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-200 transition-colors duration-300 shadow-lg">
-              A Vision for the Future
-            </h2>
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <FaLightbulb className="mr-2 text-green-400" />A Vision for the
+              Future
+            </h3>
             <p className="text-lg leading-relaxed mb-8">
               Our vision extends beyond building a platform—we aim to help
               reshape the geospatial landscape by making data more accessible,
@@ -95,10 +117,11 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Dedication to Open Source */}
-            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-200 transition-colors duration-300 shadow-lg">
+            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <FaCode className="mr-2 text-green-400" />
               Dedication to Open Source
-            </h2>
-            <p className="text-lg leading-relaxed">
+            </h3>
+            <p className="text-lg leading-relaxed mb-8">
               At <span className="font-bold">stacchain</span>, we are deeply
               committed to the principles of open source. We believe that
               collaboration, transparency, and shared knowledge are the
@@ -115,14 +138,15 @@ const ProjectIntroduction = ({ className }) => {
           {/* Sidebar Column */}
           <div className="lg:w-1/3 mt-10 lg:mt-0">
             {/* Diagram or Additional Information */}
-            <div className="bg-gray-100 p-4 rounded-md shadow-md">
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="bg-white p-4 rounded-md shadow-md">
+              <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
+                <FaCode className="mr-2 text-green-400" />
                 Understanding Merkle Trees
               </h3>
               <img
                 src={merkletree}
                 alt="Merkle Tree Diagram"
-                className="w-full h-auto mb-4"
+                className="w-full h-auto mb-4 rounded-md"
               />
               <p className="text-lg leading-relaxed">
                 Merkle trees are a fundamental component of blockchain

@@ -3,7 +3,8 @@ import {
   FaHome,
   FaInfoCircle,
   FaConciergeBell,
-  FaEnvelope,
+  // FaEnvelope,
+  FaGlobe,
 } from "react-icons/fa";
 
 const Navbar = () => {
@@ -11,16 +12,16 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "#home", icon: <FaHome /> },
-    { name: "About", href: "#about", icon: <FaInfoCircle /> },
+    { name: "About", href: "#project-introduction", icon: <FaInfoCircle /> },
     {
       name: "Smart Contracts",
       href: "#smart-contracts",
       icon: <FaConciergeBell />,
     },
     {
-      name: "Contact",
+      name: "Get Involved",
       href: "mailto:jonathan.d.healy@gmail.com",
-      icon: <FaEnvelope />,
+      icon: <FaGlobe />,
     },
   ];
 
