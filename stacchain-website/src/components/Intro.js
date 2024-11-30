@@ -1,4 +1,5 @@
 import React from "react";
+import merkletree from "../assets/merkle-trees-and-proofs.png";
 
 const ProjectIntroduction = ({ className }) => {
   return (
@@ -9,7 +10,7 @@ const ProjectIntroduction = ({ className }) => {
           {/* Main Content Column */}
           <div className="lg:w-2/3">
             {/* Mission Statement */}
-            <h2 className="group text-3xl font-bold mb-6 bg-gray-200 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-300 transition-colors duration-300 shadow-lg">
+            <h2 className="group text-3xl font-bold mb-6 bg-gray-100 text-black px-4 py-2 rounded-md border-3 border-gray-500 hover:bg-gray-300 transition-colors duration-300 shadow-lg">
               Our Mission
             </h2>
             <p className="text-lg leading-relaxed mb-8">
@@ -119,7 +120,7 @@ const ProjectIntroduction = ({ className }) => {
                 Understanding Merkle Trees
               </h3>
               <img
-                src="path/to/merkle-tree-diagram.png"
+                src={merkletree}
                 alt="Merkle Tree Diagram"
                 className="w-full h-auto mb-4"
               />

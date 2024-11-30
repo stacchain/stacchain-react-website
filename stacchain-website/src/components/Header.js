@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "./Nav";
+import Nav from "./NavSide";
 import logo from "../assets/stacchain-logo.svg";
 import Navbar from "./NavBar";
 

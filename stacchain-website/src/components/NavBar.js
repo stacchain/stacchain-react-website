@@ -12,8 +12,16 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "#home", icon: <FaHome /> },
     { name: "About", href: "#about", icon: <FaInfoCircle /> },
-    { name: "Services", href: "#services", icon: <FaConciergeBell /> },
-    { name: "Contact", href: "#contact", icon: <FaEnvelope /> },
+    {
+      name: "Smart Contracts",
+      href: "#smart-contracts",
+      icon: <FaConciergeBell />,
+    },
+    {
+      name: "Contact",
+      href: "mailto:jonathan.d.healy@gmail.com",
+      icon: <FaEnvelope />,
+    },
   ];
 
   return (

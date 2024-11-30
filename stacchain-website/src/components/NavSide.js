@@ -19,7 +19,11 @@ const Nav = ({ className }) => {
             label: "LinkedIn",
             external: true,
           },
-          { href: "#contact", icon: "fas fa-envelope", label: "Contact" },
+          {
+            href: "mailto:jonathan.d.healy@gmail.com",
+            icon: "fas fa-envelope",
+            label: "Contact",
+          },
         ].map(({ href, icon, label, external }, idx) => (
           <a
             key={idx}
