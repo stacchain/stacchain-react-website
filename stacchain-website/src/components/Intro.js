@@ -13,7 +13,7 @@ const ProjectIntroduction = ({ className }) => {
   return (
     <section
       id="project-introduction"
-      className={`bg-white px-4 py-10 ${className}`}
+      className={`bg-white px-4 py-10 scroll-mt-16 ${className}`}
     >
       <div className="max-w-screen-xl mx-auto">
         {/* Main Header */}

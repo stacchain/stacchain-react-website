@@ -14,7 +14,7 @@ const SmartContractsSection = ({ className }) => {
   return (
     <section
       id="smart-contracts"
-      className={`bg-gray-200 px-4 py-10 ${className}`}
+      className={`bg-gray-200 px-4 py-10 scroll-mt-16 ${className}`}
     >
       <div className="max-w-screen-xl mx-auto">
         {/* Container for the content */}
