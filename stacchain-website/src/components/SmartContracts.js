@@ -6,7 +6,7 @@ import {
   FaCode,
   FaBullseye,
   FaGlobe,
-  FaHandsHelping,
+  // FaHandsHelping,
 } from "react-icons/fa";
 import smartContractsDiagram from "../assets/merkle-trees-and-proofs.png"; // Ensure the path is correct
 
@@ -173,7 +173,7 @@ const SmartContractsSection = ({ className }) => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-white p-6 rounded-md shadow-md mt-10">
+        {/* <div className="bg-white p-6 rounded-md shadow-md mt-10">
           <h3
             id="get-involved"
             className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow"
@@ -192,7 +192,7 @@ const SmartContractsSection = ({ className }) => {
           >
             Join Our Community
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
