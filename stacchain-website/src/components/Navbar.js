@@ -20,7 +20,7 @@ const Navbar = () => {
     },
     {
       name: "Get Involved",
-      href: "mailto:jonathan.d.healy@gmail.com",
+      href: "#get-involved",
       icon: <FaGlobe />,
     },
   ];

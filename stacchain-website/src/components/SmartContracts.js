@@ -174,7 +174,10 @@ const SmartContractsSection = ({ className }) => {
 
         {/* Call to Action */}
         <div className="bg-white p-6 rounded-md shadow-md mt-10">
-          <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+          <h3
+            id="get-involved"
+            className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow"
+          >
             <FaHandsHelping className="mr-2 text-green-400" />
             Get Involved
           </h3>
