@@ -5,10 +5,10 @@ import {
   FaShieldAlt,
   FaCode,
   FaBullseye,
-  FaGlobe,
+  // FaGlobe,
   // FaHandsHelping,
 } from "react-icons/fa";
-import smartContractsDiagram from "../assets/merkle-trees-and-proofs.png"; // Ensure the path is correct
+import smartContractsDiagram from "../assets/smart-contract.webp";
 
 const SmartContractsSection = ({ className }) => {
   return (
@@ -154,20 +154,20 @@ const SmartContractsSection = ({ className }) => {
           <div className="lg:w-1/3 mt-10 lg:mt-0">
             {/* Diagram or Additional Information */}
             <div className="bg-white p-4 rounded-md shadow-md">
-              <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+              {/* <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
                 <FaGlobe className="mr-2 text-green-400" />
-                Smart Contracts Diagram
-              </h3>
+                Smart Contracts in stacchain
+              </h3> */}
               <img
                 src={smartContractsDiagram}
                 alt="Smart Contracts Diagram"
                 className="w-full h-auto mb-4 rounded-md"
               />
-              <p className="text-lg leading-relaxed">
+              {/* <p className="text-lg leading-relaxed">
                 This diagram illustrates how smart contracts automate
                 transactions and enforce agreements between data providers and
                 consumers within the stacchain ecosystem.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
