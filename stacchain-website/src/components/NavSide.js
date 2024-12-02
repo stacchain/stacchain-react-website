@@ -3,7 +3,7 @@ import React from "react";
 const Nav = ({ className }) => {
   return (
     <nav className={`relative z-10 ${className}`}>
-      <div className="flex flex-row md:flex-col items-center space-x-6 md:space-x-0 md:space-y-4">
+      <div className="mt-12 flex flex-row md:flex-col items-center space-x-6 md:space-x-0 md:space-y-4">
         {[
           // { href: "#home", icon: "fas fa-home", label: "Home" },
           // { href: "#about", icon: "fas fa-info-circle", label: "About" },
@@ -14,7 +14,7 @@ const Nav = ({ className }) => {
             external: true,
           },
           {
-            href: "https://github.com/stacchain",
+            href: "https://join.slack.com/t/stacchain/shared_invite/zt-2tlaz5mxy-zADeAydd4yqoK5MiOmZ1Qg",
             icon: "fab fa-slack",
             label: "Slack",
             external: true,
