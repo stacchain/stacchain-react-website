@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         comfortaa: ["Comfortaa", "cursive"],
+        serif: ["Nunito", "serif"],
+        mono: ["Fira Code", "monospace"],
       },
       fontSize: {
         clamp: "clamp(4rem, 10vw, 11rem)", // Define your clamp sizes
