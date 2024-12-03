@@ -31,7 +31,10 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-4xl font-bold font-comfortaa">
+            <a
+              href="/"
+              className="text-2xl sm:text-4xl font-bold font-comfortaa"
+            >
               <span>stac</span>
               <span className="text-white">chain</span>
             </a>
