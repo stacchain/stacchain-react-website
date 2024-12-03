@@ -17,7 +17,7 @@ const ProjectIntroduction = ({ className }) => {
     >
       <div className="max-w-screen-xl mx-auto">
         {/* Main Header */}
-        <h2 className="flex items-center text-4xl font-extrabold mb-8 text-black">
+        <h2 className="flex items-center text-2xl sm:text-4xl font-extrabold mb-8 text-black">
           <FaBullseye className="mr-3 text-green-400" />
           Introduction
         </h2>
@@ -27,11 +27,11 @@ const ProjectIntroduction = ({ className }) => {
           {/* Main Content Column */}
           <div className="lg:w-2/3">
             {/* Our Mission */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-200 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-200 transition-colors duration-300 shadow">
               <FaLightbulb className="mr-2 text-green-400" />
               Our Mission
             </h3>
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="text-md sm:text-lg leading-relaxed mb-8">
               Our mission at <span className="font-bold">stacchain</span> is to
               help revolutionize geospatial data management by ensuring data
               integrity and provenance through blockchain-based verification. We
@@ -44,11 +44,11 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Overview */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-200 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-200 transition-colors duration-300 shadow">
               <FaGlobe className="mr-2 text-green-400" />
               Overview
             </h3>
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="text-md sm:text-lg leading-relaxed mb-8">
               <span className="font-bold">stacchain</span> is a pioneering
               platform that aims to assist with bringing together the geospatial
               community into a unified, secure, and efficient ecosystem. By
@@ -62,11 +62,11 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Empowering Innovation and Collaboration */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaHandsHelping className="mr-2 text-green-400" />
               Empowering Innovation and Collaboration
             </h3>
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="text:md sm:text-lg leading-relaxed mb-8">
               At the heart of <span className="font-bold">stacchain</span> is
               the belief that accessible and reliable geospatial data can drive
               innovation and solve real-world problems. By enabling users to
@@ -83,11 +83,11 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Economic Incentives and Sustainable Growth */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaCoins className="mr-2 text-green-400" />
               Economic Incentives and Sustainable Growth
             </h3>
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="text-md sm:text-lg leading-relaxed mb-8">
               <span className="font-bold">stacchain</span> integrates economic
               incentives into its ecosystem to promote secure data sharing and
               access. Data providers can monetize their contributions, ensuring
@@ -101,11 +101,11 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* A Vision for the Future */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaLightbulb className="mr-2 text-green-400" />A Vision for the
               Future
             </h3>
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="text:md sm:text-lg leading-relaxed mb-8">
               Our vision extends beyond building a platform—we aim to help
               reshape the geospatial landscape by making data more accessible,
               secure, and valuable for everyone. By uniting data creators and
@@ -117,11 +117,11 @@ const ProjectIntroduction = ({ className }) => {
             </p>
 
             {/* Dedication to Open Source */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaCode className="mr-2 text-green-400" />
               Dedication to Open Source
             </h3>
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="text-md sm:text-lg leading-relaxed mb-8">
               At <span className="font-bold">stacchain</span>, we are deeply
               committed to the principles of open source. We believe that
               collaboration, transparency, and shared knowledge are the
