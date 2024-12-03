@@ -37,7 +37,7 @@ jobs:
         run: |
           git config --global user.name "jonhealy1"
           git config --global user.email "jonathan.d.healy@gmail.com"
-          git remote add deploy https://jonhealy1:${GITHUB_TOKEN}@github.com/stacchain/stacchain.github.io.git
+          git remote add deploy https://jonhealy1:${DEPLOY_TOKEN}@github.com/stacchain/stacchain.github.io.git
           git fetch deploy
           git checkout deploy/main || git checkout --orphan deploy/main
           git rm -rf .
