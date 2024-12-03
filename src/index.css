@@ -17,6 +17,7 @@
 /* Apply the font and remove conflicting styles */
 body {
   @apply font-serif;
+  @apply overflow-x-hidden;
   margin: 0;
   /* Removed explicit font-family to prevent override */
   -webkit-font-smoothing: antialiased;
