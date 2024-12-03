@@ -1,70 +1,70 @@
-# .github/workflows/deploy.yml
+# # .github/workflows/deploy.yml
 
-name: Deploy React App to GitHub Pages
+# name: Deploy React App to GitHub Pages
 
-on:
-  push:
-    branches:
-      - main # Trigger deployment on push to main branch
+# on:
+#   push:
+#     branches:
+#       - main # Trigger deployment on push to main branch
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-      # 1. Checkout the repository
-      - name: Checkout repository
-        uses: actions/checkout@v3
+#     steps:
+#       # 1. Checkout the repository
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
 
-      # 2. Setup Node.js environment
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16" # Specify Node.js version
+#       # 2. Setup Node.js environment
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: "16" # Specify Node.js version
 
-      # 3. Install project dependencies
-      - name: Install dependencies
-        run: npm install
+#       # 3. Install project dependencies
+#       - name: Install dependencies
+#         run: npm install
 
-      # 4. Build the React app
-      - name: Build React app
-        run: npm run build
+#       # 4. Build the React app
+#       - name: Build React app
+#         run: npm run build
 
-      # 5. Deploy to GitHub Pages using PAT and git commands
-      - name: Deploy to GitHub Pages
-        env:
-          DEPLOY_TOKEN: ${{ secrets.WEBSITE_TOKEN }} # Use PAT stored as DEPLOY_TOKEN
-        run: |
-          set -x
-          git config --global user.name "jonhealy1"
-          git config --global user.email "jonathan.d.healy@gmail.com"
+#       # 5. Deploy to GitHub Pages using PAT and git commands
+#       - name: Deploy to GitHub Pages
+#         env:
+#           DEPLOY_TOKEN: ${{ secrets.WEBSITE_TOKEN }} # Use PAT stored as DEPLOY_TOKEN
+#         run: |
+#           set -x
+#           git config --global user.name "jonhealy1"
+#           git config --global user.email "jonathan.d.healy@gmail.com"
 
-          # Remove existing deploy remote if it exists to avoid conflicts
-          git remote remove deploy || true
+#           # Remove existing deploy remote if it exists to avoid conflicts
+#           git remote remove deploy || true
 
-          # Add deploy remote using PAT for authentication
-          git remote add deploy https://x-access-token:${DEPLOY_TOKEN}@github.com/stacchain/stacchain.github.io.git
+#           # Add deploy remote using PAT for authentication
+#           git remote add deploy https://x-access-token:${DEPLOY_TOKEN}@github.com/stacchain/stacchain.github.io.git
 
-          # Verify remote URLs
-          git remote -v
+#           # Verify remote URLs
+#           git remote -v
 
-          # Fetch the deploy branch
-          git fetch deploy
+#           # Fetch the deploy branch
+#           git fetch deploy
 
-          # Checkout to deploy/main or create an orphan branch if it doesn't exist
-          git checkout deploy/main || git checkout --orphan deploy/main
+#           # Checkout to deploy/main or create an orphan branch if it doesn't exist
+#           git checkout deploy/main || git checkout --orphan deploy/main
 
-          # Remove all existing files
-          git rm -rf .
+#           # Remove all existing files
+#           git rm -rf .
 
-          # Copy build files to the repository root
-          cp -R build/* .
+#           # Copy build files to the repository root
+#           cp -R build/* .
 
-          # Add all changes
-          git add .
+#           # Add all changes
+#           git add .
 
-          # Commit changes
-          git commit -m "Deploy React app to GitHub Pages [skip ci]"
+#           # Commit changes
+#           git commit -m "Deploy React app to GitHub Pages [skip ci]"
 
-          # Push changes to deploy/main with force
-          git push deploy deploy/main --force
+#           # Push changes to deploy/main with force
+#           git push deploy deploy/main --force
