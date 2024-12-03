@@ -32,6 +32,6 @@ jobs:
           github_token: ${{ secrets.DEPLOY_TOKEN }}
           publish_dir: ./build
           publish_branch: main
-          external_repository: stacchain/stacchain.github.io
+          destination_repo: stacchain/stacchain.github.io
           user_name: "jonhealy1" # Replace with your GitHub username
           user_email: "jonathan.d.healy@gmail.com" # Replace with your GitHub email
