@@ -18,7 +18,7 @@ const Header = () => {
             <img
               src={logo}
               alt="StacChain Logo"
-              className="scale-150 sm:scale-150 h-28 sm:h-36 md:h-48 mb-4 ml-0 sm:ml-24 mt-12 max-w-full mx-auto sm:mx-0"
+              className="scale-150 sm:scale-150 h-28 sm:h-36 md:h-48 mb-4 ml-8 sm:ml-24 mt-12 max-w-full mx-auto sm:mx-0"
             />
           </div>
 
