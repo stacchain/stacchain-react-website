@@ -38,11 +38,33 @@ jobs:
           set -x
           git config --global user.name "jonhealy1"
           git config --global user.email "jonathan.d.healy@gmail.com"
-          git remote add deploy https://jonhealy1:${DEPLOY_TOKEN}@github.com/stacchain/stacchain.github.io.git
+
+          # Remove existing deploy remote if it exists to avoid conflicts
+          git remote remove deploy || true
+
+          # Add deploy remote using PAT for authentication
+          git remote add deploy https://x-access-token:${DEPLOY_TOKEN}@github.com/stacchain/stacchain.github.io.git
+
+          # Verify remote URLs
+          git remote -v
+
+          # Fetch the deploy branch
           git fetch deploy
+
+          # Checkout to deploy/main or create an orphan branch if it doesn't exist
           git checkout deploy/main || git checkout --orphan deploy/main
+
+          # Remove all existing files
           git rm -rf .
+
+          # Copy build files to the repository root
           cp -R build/* .
+
+          # Add all changes
           git add .
+
+          # Commit changes
           git commit -m "Deploy React app to GitHub Pages [skip ci]"
+
+          # Push changes to deploy/main with force
           git push deploy deploy/main --force
