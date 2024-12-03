@@ -139,7 +139,7 @@ const ProjectIntroduction = ({ className }) => {
           <div className="lg:w-1/3 mt-10 lg:mt-0">
             {/* Diagram or Additional Information */}
             <div className="bg-white p-4 rounded-md shadow-md">
-              <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
                 <FaCode className="mr-2 text-green-400" />
                 Understanding Merkle Trees
               </h3>
@@ -148,7 +148,7 @@ const ProjectIntroduction = ({ className }) => {
                 alt="Merkle Tree Diagram"
                 className="w-full h-auto mb-4 rounded-md"
               />
-              <p className="text-lg leading-relaxed">
+              <p className="text-md sm:text-lg leading-relaxed">
                 Merkle trees are a fundamental component of blockchain
                 technology, providing a way to efficiently verify data
                 integrity. Each leaf node represents a block of data, and parent

@@ -21,11 +21,11 @@ const GetInvolved = ({ className }) => {
           {/* Main Content Column */}
           <div className="lg:w-2/3">
             {/* Section Header */}
-            <h2 className="flex items-center text-4xl font-extrabold mb-8 text-black">
+            <h2 className="flex items-center text-2xl sm:text-4xl font-extrabold mb-8 text-black">
               <FaHandsHelping className="mr-3 text-green-400" />
               Get Involved
             </h2>
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="text-md sm:text-lg leading-relaxed mb-8">
               We invite developers, blockchain enthusiasts, designers, and other
               passionate individuals to contribute to our platform. Your
               participation can help us enhance the functionality and security
@@ -33,11 +33,11 @@ const GetInvolved = ({ className }) => {
             </p>
 
             {/* STAC Merkle Tree CLI Tool Explanation */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaTools className="mr-2 text-green-400" />
               STAC Merkle Tree CLI Tool
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               The{" "}
               <code className="font-mono bg-gray-200 px-1 rounded">
                 stac-merkle-tree-cli
@@ -48,10 +48,10 @@ const GetInvolved = ({ className }) => {
               for your STAC Items, Collections, and Catalogs by encoding them in
               a Merkle tree via hashing.
             </p>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               By integrating this tool into your workflow, you can:
             </p>
-            <ul className="list-disc list-inside text-lg leading-relaxed space-y-2 mb-6">
+            <ul className="list-disc list-inside text-md sm:text-lgg leading-relaxed space-y-2 mb-6">
               <li>
                 <strong>Automate Integrity Checks:</strong> Streamline the
                 process of verifying metadata integrity across your STAC
@@ -66,7 +66,7 @@ const GetInvolved = ({ className }) => {
                 Merkle information across complex catalog structures.
               </li>
             </ul>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               For detailed documentation and usage instructions, visit the{" "}
               <a
                 href="https://github.com/stacchain/stac-merkle-tree-cli"
@@ -80,11 +80,11 @@ const GetInvolved = ({ className }) => {
             </p>
 
             {/* Merkle Tree STAC Extension Explanation */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaCode className="mr-2 text-green-400" />
               Merkle Tree STAC Extension
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               The{" "}
               <code className="font-mono bg-gray-200 px-1 rounded">
                 Merkle Tree STAC Extension
@@ -95,10 +95,10 @@ const GetInvolved = ({ className }) => {
               been tampered with, maintaining the reliability and consistency of
               your geospatial data.
             </p>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               By implementing this extension, you can:
             </p>
-            <ul className="list-disc list-inside text-lg leading-relaxed space-y-2 mb-6">
+            <ul className="list-disc list-inside text-md sm:text-lg leading-relaxed space-y-2 mb-6">
               <li>
                 <strong>Verify Data Authenticity:</strong> Confirm that your
                 geospatial data remains unaltered.
@@ -112,7 +112,7 @@ const GetInvolved = ({ className }) => {
                 technology to enhance data integrity and security.
               </li>
             </ul>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               For detailed specifications and implementation guidelines, visit
               the{" "}
               <a
@@ -127,11 +127,11 @@ const GetInvolved = ({ className }) => {
             </p>
 
             {/* Contributor Types */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaHandsHelping className="mr-2 text-green-400" />
               Who We’re Looking For
             </h3>
-            <ul className="list-disc list-inside text-lg leading-relaxed space-y-2 mb-6">
+            <ul className="list-disc list-inside text-md sm:text-lg leading-relaxed space-y-2 mb-6">
               <li>
                 <strong>Blockchain Developers:</strong> Skilled in smart
                 contracts and blockchain architecture to enhance our Merkle

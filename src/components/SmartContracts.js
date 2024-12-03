@@ -22,20 +22,20 @@ const SmartContractsSection = ({ className }) => {
           {/* Main Content Column */}
           <div className="lg:w-2/3">
             {/* Section Header */}
-            <h2 className="flex items-center text-4xl font-extrabold mb-8 text-black">
+            <h2 className="flex items-center text-2xl sm:text-4xl font-extrabold mb-8 text-black">
               <FaBullseye className="mr-3 text-green-400" />
               Smart Contracts
             </h2>
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="ttxt-md sm:text-lg leading-relaxed mb-8">
               Enabling Secure Access and Economic Incentives
             </p>
 
             {/* Smart Contracts Overview */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaCode className="mr-2 text-green-400" />
               Smart Contracts Overview
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               Smart contracts are self-executing agreements with the terms
               directly written into code. In{" "}
               <span className="font-bold">stacchain</span>, they play a pivotal
@@ -44,28 +44,28 @@ const SmartContractsSection = ({ className }) => {
             </p>
 
             {/* Understanding Smart Contracts */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaLock className="mr-2 text-green-400" />
               Understanding Smart Contracts
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               A smart contract is a program that runs on the blockchain,
               automatically executing predefined actions when certain conditions
               are met. This eliminates the need for intermediaries, reduces
               costs, and increases efficiency.
             </p>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               In the context of <span className="font-bold">stacchain</span>,
               smart contracts facilitate secure data transactions, manage
               permissions, and distribute rewards to data contributors.
             </p>
 
             {/* Economic Incentives */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaCoins className="mr-2 text-green-400" />
               Economic Incentives
             </h3>
-            <p className="text-lg leading-relaxed mb-4">
+            <p className="text-md sm:text-lg leading-relaxed mb-4">
               By integrating smart contracts,{" "}
               <span className="font-bold">stacchain</span> creates a token-based
               economy where data providers are rewarded for their contributions.
@@ -86,17 +86,17 @@ const SmartContractsSection = ({ className }) => {
                 providers upon data access.
               </li>
             </ul>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               This system incentivizes high-quality data contributions and
               ensures a fair distribution of rewards.
             </p>
 
             {/* Secure Access Control */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaShieldAlt className="mr-2 text-green-400" />
               Secure Access Control
             </h3>
-            <p className="text-lg leading-relaxed mb-4">
+            <p className="text-md sm:text-lg leading-relaxed mb-4">
               Smart contracts also manage access control, ensuring that only
               authorized users can access certain data. Features include:
             </p>
@@ -115,17 +115,17 @@ const SmartContractsSection = ({ className }) => {
                 encryption, with keys managed by smart contracts.
               </li>
             </ul>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               These mechanisms enhance security and build trust between data
               providers and users.
             </p>
 
             {/* Technical Implementation */}
-            <h3 className="flex items-center text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaCode className="mr-2 text-green-400" />
               Technical Implementation
             </h3>
-            <p className="text-lg leading-relaxed mb-4">
+            <p className="text-md sm:text-lg leading-relaxed mb-4">
               The smart contracts in{" "}
               <span className="font-bold">stacchain</span> are developed using
               industry-standard practices and technologies:
@@ -145,7 +145,7 @@ const SmartContractsSection = ({ className }) => {
                 audits to ensure robustness and prevent vulnerabilities.
               </li>
             </ul>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
               This approach ensures compatibility, security, and scalability.
             </p>
           </div>
