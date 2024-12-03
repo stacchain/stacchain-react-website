@@ -12,26 +12,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # 2. Setup Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "16" # Specify Node.js version
 
+      # 3. Install project dependencies
       - name: Install dependencies
         run: npm install
 
+      # 4. Build the React app
       - name: Build React app
         run: npm run build
 
+      # 5. Deploy to GitHub Pages using PAT and git commands
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.DEPLOY_TOKEN }}
-          publish_dir: ./build
-          publish_branch: main
-          destination_repo: stacchain/stacchain.github.io
-          user_name: "jonhealy1" # Replace with your GitHub username
-          user_email: "jonathan.d.healy@gmail.com" # Replace with your GitHub email
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: |
+          git config --global user.name "jonhealy1"
+          git config --global user.email "jonathan.d.healy@gmail.com"
+          git remote add deploy https://jonhealy1:${GITHUB_TOKEN}@github.com/stacchain/stacchain.github.io.git
+          git fetch deploy
+          git checkout deploy/main || git checkout --orphan deploy/main
+          git rm -rf .
+          cp -R build/* .
+          git add .
+          git commit -m "Deploy React app to GitHub Pages [skip ci]"
+          git push deploy deploy/main --force
