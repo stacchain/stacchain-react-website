@@ -7,6 +7,7 @@ import {
   FaSlack,
   FaTools,
   FaCode,
+  FaShieldAlt,
 } from "react-icons/fa";
 
 const GetInvolved = ({ className }) => {
@@ -126,6 +127,49 @@ const GetInvolved = ({ className }) => {
               .
             </p>
 
+            {/* Smart Contracts Section */}
+            <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+              <FaShieldAlt className="mr-2 text-green-400" />
+              stacchain - Smart Contract examples
+            </h3>
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
+              The{" "}
+              <code className="font-mono bg-gray-200 px-1 rounded">
+                stacchain Smart Contracts
+              </code>{" "}
+              enable secure and automated transactions for geospatial data. By
+              leveraging these contracts, users can purchase access codes for
+              geospatial collections, and ensure data integrity using blockchain
+              technology.
+            </p>
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
+              These contracts:
+            </p>
+            <ul className="list-disc list-inside text-md sm:text-lg leading-relaxed space-y-2 mb-6">
+              <li>
+                Provide user-specific, time-limited access codes for secure
+                geospatial data access.
+              </li>
+              <li>
+                Emit events for integration with external APIs or databases.
+              </li>
+              <li>
+                Support admin features like price updates and access revocation.
+              </li>
+            </ul>
+            <p className="text-md sm:text-lg leading-relaxed mb-6">
+              Explore the{" "}
+              <a
+                href="https://github.com/stacchain/stacchain-smart-contracts"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-500 underline"
+              >
+                stacchain Smart Contracts GitHub repository
+              </a>{" "}
+              to contribute or learn more.
+            </p>
+
             {/* Contributor Types */}
             <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-6 bg-gray-100 text-black px-3 py-1 rounded-md border border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
               <FaHandsHelping className="mr-2 text-green-400" />
@@ -160,11 +204,53 @@ const GetInvolved = ({ className }) => {
             </ul>
           </div>
 
-          {/* Sidebar Column (Optional) */}
-          {/* If you have any images or additional information, you can include them here */}
-          {/* <div className="lg:w-1/3 mt-10 lg:mt-0">
-            <img src={yourImage} alt="Get Involved" className="w-full h-auto rounded-md shadow-md" />
-          </div> */}
+          <div className="lg:w-1/3 mt-10 lg:mt-0">
+            <div className="bg-white p-4 rounded-md shadow-md">
+              <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+                Merkle Tree STAC Example
+              </h3>
+              <p className="text-md sm:text-lg leading-relaxed mb-4">
+                This is an example of a STAC Collection enhanced with the Merkle
+                Tree STAC Extension. The Merkle fields ensure metadata integrity
+                and provide a mechanism to verify object hashes.
+              </p>
+              <pre className="bg-gray-900 text-sm sm:text-md text-white p-4 rounded-md overflow-x-auto shadow-md">
+                <code className="language-json">
+                  {`{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "id": "collection1",
+  "description": "example",
+  "extent": {},
+  "links": [],
+  "stac_extensions": [
+    "https://stacchain.github.io/merkle-tree/v1.0.0/schema.json"
+  ],
+  "merkle:object_hash": "fedcba0987654321fedcba0987654321fedcba0987654321fedcba0987654321",
+  "merkle:root": "0987654321fedcba0987654321fedcba0987654321fedcba0987654321fedcba",
+  "merkle:hash_method": {
+    "function": "sha256",
+    "fields": ["*"],
+    "ordering": "ascending",
+    "description": "Computed by excluding Merkle fields and including merkle:object_hash values in ascending order to build the Merkle tree."
+  }
+}`}
+                </code>
+              </pre>
+              <p className="text-md sm:text-lg leading-relaxed mt-4">
+                Learn more about the extension by visiting the{" "}
+                <a
+                  href="https://github.com/stacchain/merkle-tree"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-500 underline"
+                >
+                  Merkle Tree STAC Extension repository
+                </a>
+                .
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Call to Action Buttons */}
@@ -208,6 +294,16 @@ const GetInvolved = ({ className }) => {
           >
             <FaCode className="mr-2" />
             Merkle Tree STAC Extension
+          </a>
+          <a
+            href="https://github.com/stacchain/stacchain-smart-contracts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center px-6 py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition-colors duration-300"
+            aria-label="Visit the STAC Smart Contracts repository"
+          >
+            <FaCode className="mr-2" />
+            stacchain Smart Contracts
           </a>
         </div>
       </div>
