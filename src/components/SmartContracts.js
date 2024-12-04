@@ -10,21 +10,26 @@ import {
 } from "react-icons/fa";
 import CodeBlock from "./CodeBlock";
 
-const solidityCode = `/// @notice Purchase an access key for the STAC collection
-function purchaseAccess() external payable returns (string memory) {
-    require(msg.value == keyPrice, "Incorrect amount sent");
-    require(bytes(accessKeys[msg.sender]).length == 0, 
-      "You already have access");
+const solidityCode = `/// @notice Purchase an access code for the STAC collection
+/// @return accessCode The generated access code
+function purchaseAccessCode() external payable returns (string memory) {
+    require(msg.value == accessPrice, "Incorrect payment amount");
+    require(!hasPurchased[msg.sender], "Access already purchased");
 
-    // Generate a unique access key
-    string memory accessKey = generateAccessKey(msg.sender);
-    accessKeys[msg.sender] = accessKey;
-    validKeys[accessKey] = true;
+    // Generate a unique access code
+    string memory accessCode = _generateAccessCode(msg.sender);
 
-    // Emit event to notify external services
-    emit KeyPurchased(msg.sender, accessKey);
+    // Hash and store the access code
+    accessRecords[msg.sender] = AccessData({
+        hashedCode: keccak256(abi.encodePacked(accessCode)),
+        expiryTime: block.timestamp + defaultValidityPeriod
+    });
+    hasPurchased[msg.sender] = true;
 
-    return accessKey;
+    // Emit event to notify external systems
+    emit AccessCodeGenerated(msg.sender, accessRecords[msg.sender].expiryTime);
+
+    return accessCode;
 }`;
 
 const SmartContractsSection = ({ className }) => {
@@ -172,44 +177,32 @@ const SmartContractsSection = ({ className }) => {
               <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
                 Smart Contracts in stacchain
               </h3>
+              <CodeBlock code={solidityCode} />
+              <br />
               <p className="text-md leading-relaxed mb-4">
                 This Solidity code demonstrates how users can securely purchase
-                access keys for a STAC collection using blockchain technology.
-                It ensures secure payments, generates unique keys, and prevents
-                duplicate purchases.
+                access codes for a STAC collection using blockchain technology.
+                It ensures secure payments, generates unique user-specific
+                codes, and prevents duplicate purchases by tying each code to
+                the user’s wallet address.
               </p>
               <p className="text-md leading-relaxed mb-4">
-                Additionally, it emits an event (`KeyPurchased`) to notify
-                external systems about the purchase. This is essential for
-                tracking access keys off-chain and integrating with external
-                tools like databases or APIs.
+                The contract emits events such as{" "}
+                <code>AccessCodeGenerated</code> and{" "}
+                <code>AccessCodeRevoked</code> to notify external systems about
+                purchases and revocations. These events facilitate seamless
+                integration with APIs, databases, or other external tools to
+                track and validate access.
               </p>
-              <CodeBlock code={solidityCode} />
+              <p className="text-md leading-relaxed mb-4">
+                It also supports time-limited validity for access codes,
+                balancing user convenience and security. The actual codes are
+                not stored on-chain; instead, only their cryptographic hashes
+                are stored for validation.
+              </p>
             </div>
           </div>
         </div>
-
-        {/* Call to Action */}
-        {/* <div className="bg-white p-6 rounded-md shadow-md mt-10">
-          <h3
-            id="get-involved"
-            className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow"
-          >
-            <FaHandsHelping className="mr-2 text-green-400" />
-            Get Involved
-          </h3>
-          <p className="text-lg leading-relaxed mb-4">
-            We invite developers and blockchain enthusiasts to contribute to our
-            platform. Your participation can help us enhance the functionality
-            and security of our ecosystem.
-          </p>
-          <a
-            href="https://github.com/stacchain"
-            className="inline-block px-6 py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition-colors duration-300"
-          >
-            Join Our Community
-          </a>
-        </div> */}
       </div>
     </section>
   );
