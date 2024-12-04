@@ -8,7 +8,24 @@ import {
   // FaGlobe,
   // FaHandsHelping,
 } from "react-icons/fa";
-import smartContractsDiagram from "../assets/smart-contract.webp";
+import CodeBlock from "./CodeBlock";
+
+const solidityCode = `/// @notice Purchase an access key for the STAC collection
+function purchaseAccess() external payable returns (string memory) {
+    require(msg.value == keyPrice, "Incorrect amount sent");
+    require(bytes(accessKeys[msg.sender]).length == 0, 
+      "You already have access");
+
+    // Generate a unique access key
+    string memory accessKey = generateAccessKey(msg.sender);
+    accessKeys[msg.sender] = accessKey;
+    validKeys[accessKey] = true;
+
+    // Emit event to notify external services
+    emit KeyPurchased(msg.sender, accessKey);
+
+    return accessKey;
+}`;
 
 const SmartContractsSection = ({ className }) => {
   return (
@@ -152,22 +169,11 @@ const SmartContractsSection = ({ className }) => {
 
           {/* Sidebar Column */}
           <div className="lg:w-1/3 mt-10 lg:mt-0">
-            {/* Diagram or Additional Information */}
             <div className="bg-white p-4 rounded-md shadow-md">
-              {/* <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
-                <FaGlobe className="mr-2 text-green-400" />
+              <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
                 Smart Contracts in stacchain
-              </h3> */}
-              <img
-                src={smartContractsDiagram}
-                alt="Smart Contracts Diagram"
-                className="w-full h-auto mb-4 rounded-md"
-              />
-              {/* <p className="text-lg leading-relaxed">
-                This diagram illustrates how smart contracts automate
-                transactions and enforce agreements between data providers and
-                consumers within the stacchain ecosystem.
-              </p> */}
+              </h3>
+              <CodeBlock code={solidityCode} />
             </div>
           </div>
         </div>
