@@ -167,12 +167,23 @@ const SmartContractsSection = ({ className }) => {
             </p>
           </div>
 
-          {/* Sidebar Column */}
           <div className="lg:w-1/3 mt-10 lg:mt-0">
             <div className="bg-white p-4 rounded-md shadow-md">
               <h3 className="flex items-center text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
                 Smart Contracts in stacchain
               </h3>
+              <p className="text-md leading-relaxed mb-4">
+                This Solidity code demonstrates how users can securely purchase
+                access keys for a STAC collection using blockchain technology.
+                It ensures secure payments, generates unique keys, and prevents
+                duplicate purchases.
+              </p>
+              <p className="text-md leading-relaxed mb-4">
+                Additionally, it emits an event (`KeyPurchased`) to notify
+                external systems about the purchase. This is essential for
+                tracking access keys off-chain and integrating with external
+                tools like databases or APIs.
+              </p>
               <CodeBlock code={solidityCode} />
             </div>
           </div>
