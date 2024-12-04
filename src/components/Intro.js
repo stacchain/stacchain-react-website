@@ -6,6 +6,7 @@ import {
   FaCoins,
   FaLightbulb,
   FaCode,
+  FaCubes,
 } from "react-icons/fa";
 import merkletree from "../assets/merkle-trees-and-proofs.png"; // Ensure the path is correct
 
@@ -140,7 +141,7 @@ const ProjectIntroduction = ({ className }) => {
             {/* Diagram or Additional Information */}
             <div className="bg-white p-4 rounded-md shadow-md">
               <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-200 hover:bg-gray-300 transition-colors duration-300 shadow">
-                <FaCode className="mr-2 text-green-400" />
+                <FaCubes className="mr-2 text-green-400" />
                 Understanding Merkle Trees
               </h3>
               <img
@@ -148,13 +149,30 @@ const ProjectIntroduction = ({ className }) => {
                 alt="Merkle Tree Diagram"
                 className="w-full h-auto mb-4 rounded-md"
               />
-              <p className="text-md sm:text-lg leading-relaxed">
+              <p className="text-md leading-relaxed">
                 Merkle trees are a fundamental component of blockchain
                 technology, providing a way to efficiently verify data
                 integrity. Each leaf node represents a block of data, and parent
                 nodes are hashes of their respective child nodes. This structure
                 allows for quick verification of any individual piece of data
                 within the tree.
+              </p>
+              <p className="text-md leading-relaxed mt-4">
+                In the context of STAC (SpatioTemporal Asset Catalog), Merkle
+                trees enable the verification of entire catalogs, collections,
+                and items by deriving a root hash that represents all underlying
+                elements. The root hash is computed by recursively hashing
+                metadata from all related items, collections, and catalogs in
+                ascending order. This ensures that even a small change in any
+                underlying component will result in a completely different root
+                hash, making tampering easily detectable.
+              </p>
+              <p className="text-md leading-relaxed mt-4">
+                Using this approach, users can validate the integrity and
+                provenance of STAC data, ensuring it has not been altered or
+                corrupted. The root hash acts as a cryptographic fingerprint for
+                the entire dataset, providing confidence in the reliability of
+                the geospatial information.
               </p>
             </div>
           </div>
