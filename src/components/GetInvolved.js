@@ -8,6 +8,7 @@ import {
   FaTools,
   FaCode,
   FaShieldAlt,
+  FaTree,
 } from "react-icons/fa";
 
 const GetInvolved = ({ className }) => {
@@ -207,8 +208,10 @@ const GetInvolved = ({ className }) => {
           <div className="lg:w-1/3 mt-10 lg:mt-0">
             <div className="bg-white p-4 rounded-md shadow-md">
               <h3 className="flex items-center text-xl sm:text-2xl font-bold mb-4 bg-gray-100 text-black px-3 py-1 rounded-md border-1 border-gray-400 hover:bg-gray-300 transition-colors duration-300 shadow">
+                <FaTree className="mr-2 text-green-400" />
                 Merkle Tree STAC Example
               </h3>
+
               <p className="text-md sm:text-lg leading-relaxed mb-4">
                 This is an example of a STAC Collection enhanced with the Merkle
                 Tree STAC Extension. The Merkle fields ensure metadata integrity
