@@ -174,6 +174,19 @@ const ProjectIntroduction = ({ className }) => {
                 the entire dataset, providing confidence in the reliability of
                 the geospatial information.
               </p>
+              <p className="text-md leading-relaxed mt-4">
+                Merkle proofs are a lightweight and efficient way to verify the
+                inclusion of a specific data block within a Merkle tree. Instead
+                of needing the entire dataset, a Merkle proof provides the
+                minimal set of sibling hashes required to trace a path from the
+                target leaf node to the root hash. In the context of STAC,
+                Merkle proofs allow users to verify the integrity of an
+                individual STAC item, collection, or catalog by comparing the
+                computed root hash against the known root stored on the
+                blockchain. This approach significantly reduces the amount of
+                data transferred and processed while maintaining the highest
+                level of cryptographic assurance.
+              </p>
             </div>
           </div>
         </div>
