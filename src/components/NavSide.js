@@ -26,6 +26,12 @@ const Nav = ({ className }) => {
             external: true,
           },
           {
+            href: "https://bsky.app/profile/stacchain.bsky.social",
+            icon: "fab fa-bluesky",
+            label: "Bluesky",
+            external: true,
+          },
+          {
             href: "mailto:jonathan.d.healy@gmail.com",
             icon: "fas fa-envelope",
             label: "Contact",
