@@ -26,7 +26,7 @@ const Nav = ({ className }) => {
             external: true,
           },
           {
-            href: "https://bsky.app/profile/stacchain.bsky.social",
+            href: "https://bsky.app/profile/stacchain.github.io",
             icon: "fab fa-bluesky",
             label: "Bluesky",
             external: true,
